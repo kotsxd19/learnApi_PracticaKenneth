@@ -8,7 +8,7 @@ import IntegracionBackFront.backfront.Exceptions.Users.UsuarioCorreoDuplicadoExc
 import IntegracionBackFront.backfront.Models.DTO.Users.UserDTO;
 import IntegracionBackFront.backfront.Repositories.UserType.UserTypeRepository;
 import IntegracionBackFront.backfront.Repositories.Users.UserRepository;
-import IntegracionBackFront.backfront.Config.Crypto.Argon2Password;
+import IntegracionBackFront.backfront.Config.Argon2.Argon2Password;
 import IntegracionBackFront.backfront.Utils.PasswordGenerator;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
@@ -17,9 +17,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.Optional;
 
 @Slf4j
 @Service
