@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServletResponse;
+
+import jakarta.servlet.http.HttpServletResponse;
 import java.util.Optional;
 
 @RestController
@@ -27,7 +28,7 @@ public class AuthController {
     private JWTUtils jwtUtils;
 
 
-@PostMapping("/Login")
+@PostMapping("/login")
 private ResponseEntity<String> Login(@Valid @RequestBody UserDTO data, HttpServletResponse response){
     if (data.getCorreo() == null || data.getCorreo().isBlank() ||
             data.getContrasena() == null || data.getContrasena().isBlank()) {
